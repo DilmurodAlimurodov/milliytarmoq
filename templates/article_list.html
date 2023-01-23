@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block title %}Postlar{% endblock title %}
 {% block content %}
-<div style="margin-top: 70px;">
+<div class="lispost">
 {% for article in object_list %}
-<div class="card" style="border-radius:12px;width: 35rem; margin-left: 500px; margin-right:500px;margin-bottom:10px;">
+<div class="card" style="border-radius:12px;">
   {% if article.photo %}
   <img class="card-img-top" src="{{article.photo.url}}" alt="{{article.author}}">
   {% endif %}

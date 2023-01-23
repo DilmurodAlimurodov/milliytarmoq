@@ -2,7 +2,7 @@
 {% block title %}Bosh sahifa{% endblock title %}
 {% block content %}
 {% if user.is_authenticated %}
-<div class="jumbotron" style="margin-top:70px;margin-left:150px; margin-right:150px">
+<div class="jumb">
   <h1 class="display-4">Assalomu alaykum, {{user.username}}!</h1>
   <p class="lead">Men Alimurodov Dilmurod Milliy Tarmoqqa asos soldim.</p>
   <hr class="my-4">
@@ -10,12 +10,12 @@
   <a class="btn btn-primary btn-lg" href="{% url 'article_list' %}" role="button">Postlarni ko'rish</a>
 </div>
 {% else %}
-<div class="jumbotron" style="margin-top:70px;margin-left:150px; margin-right:150px">
+<div class="jumb">
   <h1 class="display-4">Assalomu alaykum, Foydalanuvchi!</h1>
   <p class="lead">Men Alimurodov Dilmurod Milliy Tarmoqqa asos soldim.</p>
   <hr class="my-4">
   <p>Bu yerda xohlagan ishingizni qilishingiz mumkin.</p>
-  <a class="btn btn-primary btn-lg" href="{% url 'article_list' %}" role="button">Postlarni ko'rish</a>
+  <a class="btn btn-primary btn-lg" id="btnn" href="{% url 'article_list' %}" role="button">Postlarni ko'rish</a>
 </div>
 {% endif %}
 
