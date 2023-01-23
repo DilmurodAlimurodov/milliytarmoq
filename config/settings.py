@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '-s6si1g0m=2x+ikikm7$7#*p@cq70vv65l&e0no!tyig8=&jwe'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['.pythonanywhere.com','127.0.0.1']
 
@@ -122,8 +122,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
-
+# STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
+import os
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
 # EMAIL_BACKEND
